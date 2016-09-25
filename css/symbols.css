@@ -1,22 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
-
-html, body {
-    height: 100%;
-}
-
-body {
-    background: #1d1a60;
-    background-size: .2em 100%;
-    font: 7.5em/1 Open Sans, Impact;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+@import "animations.css";
 
 /* A, L animation */
 
@@ -24,13 +6,6 @@ svg {
     stroke-width: 6;
     stroke:#00D7C5;
     animation: astrokeanim 2s infinite linear;
-}
-
-@keyframes astrokeanim {
-    0%{stroke-width: 6;}
-    50%{stroke-width: 0;}
-    100%{stroke-width: 6;}
-
 }
 
 #l-usetag {
@@ -92,19 +67,6 @@ svg {
     animation-delay: -6s;
 }
 
-
-@-webkit-keyframes stroke {
-    100% {
-        stroke-dashoffset: -400;
-    }
-}
-
-@keyframes stroke {
-    100% {
-        stroke-dashoffset: -400;
-    }
-}
-
 /* V animation */
 
 .text {
@@ -137,12 +99,6 @@ svg {
     animation-delay: -.1s;
 }
 
-
-@keyframes vstroke {
-    100%{stroke-dashoffset:0;}
-}
-
-
 /* Y animation */
 
 .text3, .text5 {
@@ -155,34 +111,4 @@ svg {
 
 .confetti-rect {
     animation: confettianim 4s infinite linear;
-}
-
-@keyframes confettianim {
-    0%{
-        fill: #ff3b87;
-    }
-    30%{
-        fill: #9900ff;
-    }
-    65% {
-        fill: #f5eb00;
-    }
-    100%{
-        fill: #00d7c5;
-    }
-}
-
-@keyframes ystrokeanim {
-    0%{
-        stroke: #ff3b87;
-    }
-    30%{
-        stroke: #9900ff;
-    }
-    65% {
-        stroke: #f5eb00;
-    }
-    100%{
-        stroke: #00d7c5;
-    }
 }

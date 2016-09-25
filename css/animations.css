@@ -1,0 +1,55 @@
+@keyframes astrokeanim {
+    0%{
+        stroke-width: 6;
+    }
+
+    50%{
+        stroke-width: 0;
+    }
+
+    100%{
+        stroke-width: 6;
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+
+@keyframes vstroke {
+    100%{
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes confettianim {
+    0%{
+        fill: #ff3b87;
+    }
+    30%{
+        fill: #9900ff;
+    }
+    65% {
+        fill: #f5eb00;
+    }
+    100%{
+        fill: #00d7c5;
+    }
+}
+
+@keyframes ystrokeanim {
+    0%{
+        stroke: #ff3b87;
+    }
+    30%{
+        stroke: #9900ff;
+    }
+    65% {
+        stroke: #f5eb00;
+    }
+    100%{
+        stroke: #00d7c5;
+    }
+}
