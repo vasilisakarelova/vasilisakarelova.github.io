@@ -1,15 +1,14 @@
-console.log(document.title);
-/*$(function() {
-  // Get page title
-  var pageTitle = $("title").text();
+(function () {
+  const title = document.title;
 
-  // Change page title on blur
-  $(window).blur(function() {
-    $("title").text("Don't forget to read this...");
+  document.addEventListener('blur', ev => {
+    document.title = 'I miss you :(';
+    console.log(ev.target);
+  })
+
+  document.addEventListener('focus', ev => {
+    document.title = title;
+    console.log(ev.target);
   });
 
-  // Change page title back on focus
-  $(window).focus(function() {
-    $("title").text(pageTitle);
-  });
-});*/
+})();
