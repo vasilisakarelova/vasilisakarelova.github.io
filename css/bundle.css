@@ -62,7 +62,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: white;
+  background: #1d1a60;
   background-size: .2em 100%;
   font: 7.5em/1 Open Sans, Impact;
   text-transform: uppercase;
@@ -172,4 +172,5 @@ svg {
 
 .link-mailto {
   font-family: 'Gerbera Medium', sans-serif;
-  color: black; }
+  color: black;
+  cursor: pointer; }
