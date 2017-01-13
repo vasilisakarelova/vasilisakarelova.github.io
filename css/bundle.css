@@ -1,0 +1,171 @@
+/*
+Theme Name: Loop
+Template: Impreza
+Version: 1.0
+Author:	Vasilisa Karelova, Trama Studio
+Theme URI: http://tramastudio.net/themes/loop/
+Author URI: http://tramastudio.net/
+*/
+/**
+ * Settings
+ * colors, sizes and other variables
+ */
+/**
+ * State - state style
+ * @see https://smacss.com/book/type-state
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@keyframes astrokeanim {
+  0% {
+    stroke-width: 6; }
+  50% {
+    stroke-width: 0; }
+  100% {
+    stroke-width: 6; } }
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400; } }
+
+@keyframes vstroke {
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes confettianim {
+  0% {
+    fill: #ff3b87; }
+  30% {
+    fill: #9900ff; }
+  65% {
+    fill: #f5eb00; }
+  100% {
+    fill: #00d7c5; } }
+
+@keyframes ystrokeanim {
+  0% {
+    stroke: #ff3b87; }
+  30% {
+    stroke: #9900ff; }
+  65% {
+    stroke: #f5eb00; }
+  100% {
+    stroke: #00d7c5; } }
+
+/**
+ * Fonts - global import of fonts
+ */
+/**
+ * Base - base style for common elements (no modules)
+ * @see http://smacss.com/book/type-base
+ */
+html, body {
+  height: 100%; }
+
+body {
+  background: #1d1a60;
+  background-size: .2em 100%;
+  font: 7.5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0; }
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+/**
+ * Modules - discrete component of the page
+ * @see http://smacss.com/book/type-module
+ */
+/* A, L animation */
+#a-usetag {
+  stroke-width: 6;
+  stroke: #00D7C5;
+  animation: astrokeanim 2s infinite linear; }
+
+#l-usetag {
+  stroke-width: 6;
+  stroke: #f5eb00;
+  animation: astrokeanim 2s infinite linear; }
+
+/* S animation */
+.text2, .text4, .text6 {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear; }
+
+.text2:nth-child(5n + 1),
+.text4:nth-child(5n + 1),
+.text6:nth-child(5n + 1) {
+  stroke: #ff3b87;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s; }
+
+.text2:nth-child(5n + 2),
+.text4:nth-child(5n + 2),
+.text6:nth-child(5n + 2) {
+  stroke: #9900ff;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s; }
+
+.text2:nth-child(5n + 3),
+.text4:nth-child(5n + 3),
+.text6:nth-child(5n + 3) {
+  stroke: #ffffff;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s; }
+
+.text2:nth-child(5n + 4),
+.text4:nth-child(5n + 4),
+.text6:nth-child(5n + 4) {
+  stroke: #00d7c5;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s; }
+
+.text2:nth-child(5n + 5),
+.text4:nth-child(5n + 5),
+.text6:nth-child(5n + 5) {
+  stroke: #f5eb00;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s; }
+
+/* V animation */
+.text {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-dasharray: 1160;
+  stroke-dashoffset: 1160;
+  -webkit-animation: vstroke 6s infinite linear;
+  animation: vstroke 6s infinite ease-in-out; }
+
+.text:nth-child(3n+3) {
+  stroke-width: 4;
+  stroke: #ff3b87;
+  -webkit-animation-delay: 0s;
+  animation-delay: 00s; }
+
+.text:nth-child(3n+1) {
+  stroke: #9900ff;
+  stroke-width: 1;
+  -webkit-animation-delay: .2s;
+  animation-delay: -.2s; }
+
+.text:nth-child(3n+2) {
+  stroke: #f5eb00;
+  stroke-width: 2;
+  -webkit-animation-delay: -.1s;
+  animation-delay: -.1s; }
+
+/* Y animation */
+.text3, .text5 {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-width: 6;
+  animation: ystrokeanim 4s infinite linear; }
+
+.confetti {
+  animation: confettianim 4s infinite linear; }

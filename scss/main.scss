@@ -1,0 +1,38 @@
+/*
+Theme Name: Loop
+Template: Impreza
+Version: 1.0
+Author:	Vasilisa Karelova, Trama Studio
+Theme URI: http://tramastudio.net/themes/loop/
+Author URI: http://tramastudio.net/
+*/
+
+/**
+ * Settings
+ * colors, sizes and other variables
+ */
+@import '_settings.scss';
+
+/**
+ * State - state style
+ * @see https://smacss.com/book/type-state
+ */
+//@import '_states.scss';
+@import '_animations.scss';
+
+/**
+ * Fonts - global import of fonts
+ */
+//@import '_fonts.scss';
+
+/**
+ * Base - base style for common elements (no modules)
+ * @see http://smacss.com/book/type-base
+ */
+@import '_base.scss';
+
+/**
+ * Modules - discrete component of the page
+ * @see http://smacss.com/book/type-module
+ */
+ @import 'modules/_symbols.scss';
