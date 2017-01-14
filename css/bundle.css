@@ -14,7 +14,6 @@ Author URI: http://tramastudio.net/
  * State - state style
  * @see https://smacss.com/book/type-state
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 @keyframes astrokeanim {
   0% {
     stroke-width: 6; }
@@ -58,20 +57,16 @@ Author URI: http://tramastudio.net/
  * Base - base style for common elements (no modules)
  * @see http://smacss.com/book/type-base
  */
+* {
+  box-sizing: border-box; }
+
 html, body {
   height: 100%; }
 
 body {
-  background: #1d1a60;
-  background-size: .2em 100%;
-  font: 7.5em/1 Open Sans, Impact;
-  text-transform: uppercase;
+  background: #fff;
+  font: 14px 'Gerbera', sans-serif;
   margin: 0; }
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
 
 /**
  * Modules - discrete component of the page
@@ -170,7 +165,116 @@ svg {
 .confetti {
   animation: confettianim 4s infinite linear; }
 
-.link-mailto {
+.cls-1 {
+  fill: #fff200; }
+
+.cls-2 {
+  fill: #00ffd4; }
+
+.cls-3 {
+  fill: #33b88c; }
+
+.cls-4, .cls-6 {
+  fill: blue; }
+
+.cls-5, .cls-7, .cls-8, .cls-9 {
+  fill: none;
+  stroke: blue; }
+
+.cls-5, .cls-7, .cls-9 {
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.cls-5 {
+  stroke-width: 1.25px; }
+
+.cls-6 {
+  font-size: 6px;
+  font-family: AdobeArabic-Regular, Adobe Arabic; }
+
+.cls-7 {
+  stroke-width: 1.95px; }
+
+.cls-8 {
+  stroke-miterlimit: 10;
+  stroke-width: 1.95px; }
+
+.cls-9 {
+  stroke-width: 1.75px; }
+
+.root {
+  position: relative;
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto; }
+  @media screen and (min-width: 425px) {
+    .root {
+      width: 80%; } }
+
+.capture {
+  position: relative;
+  height: 100%;
+  padding: 30px 0; }
+
+.footer-body {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 90%;
+  text-align: left; }
+  @media screen and (min-width: 425px) {
+    .footer-body {
+      width: 80%;
+      padding: 30px 0; } }
+
+.footer-row {
+  position: relative;
+  display: block;
+  overflow: auto;
+  width: 100%; }
+
+.footer-cell {
+  width: 16%;
+  margin-right: 4%;
+  clear: none;
+  display: inline-flex;
+  float: left; }
+  .footer-cell:before, .footer-cell:after {
+    content: '';
+    display: table; }
+
+.footer-cell-email {
+  position: relative;
+  display: inline-flex;
+  width: 60%;
+  float: left; }
+
+.footer-p {
+  display: inline-block;
+  font-size: 15px;
+  color: #00ffd4; }
+  @media screen and (min-width: 425px) {
+    .footer-p {
+      font-size: 20px; } }
+  @media screen and (min-width: 80.0625em) {
+    .footer-p {
+      font-size: 30px; } }
+
+.footer-link {
+  position: relative;
+  display: block;
   font-family: 'Gerbera Medium', sans-serif;
-  color: black;
-  cursor: pointer; }
+  font-size: 15px;
+  color: #0000ff;
+  cursor: pointer;
+  text-decoration: none; }
+  @media screen and (min-width: 40.0625em) {
+    .footer-link {
+      font-size: 20px; } }
+  @media screen and (min-width: 80.0625em) {
+    .footer-link {
+      font-size: 30px; } }
+
+.footer-p-copyright {
+  font-size: 11px; }

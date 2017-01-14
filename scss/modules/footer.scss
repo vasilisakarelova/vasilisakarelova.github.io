@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile-l) {
+    width: 80%;
+  }
+}
+
+.capture {
+  position: relative;
+  height: 100%;
+  padding: 30px 0;
+}
+
+.footer-body {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 90%;
+  text-align: left;
+
+  @media screen and (min-width: $mobile-l) {
+    width: 80%;
+    padding: 30px 0;
+  }
+}
+
+.footer-row {
+  position: relative;
+  display: block;
+  overflow: auto; // this help to set the hight, when element has floating elems inside
+  width: 100%;
+}
+
+.footer-cell {
+  width: 16%;
+  margin-right: 4%;
+  clear: none;
+  display: inline-flex;
+  float: left;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
+.footer-cell-email {
+  position: relative;
+  display: inline-flex;
+  width: 60%;
+  float: left;
+}
+
+.footer-p {
+  display: inline-block;
+  font-size: 15px;
+  color: #00ffd4;
+
+  @media screen and (min-width: $mobile-l) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $medium-up) {
+    font-size: 30px;
+  }
+}
+
+.footer-link {
+  position: relative;
+  display: block;
+  font-family: 'Gerbera Medium', sans-serif;
+  font-size: 15px;
+  color: #0000ff;
+  cursor: pointer;
+  text-decoration: none;
+
+  @media screen and (min-width: $small-up) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $medium-up) {
+    font-size: 30px;
+  }
+}
+
+.footer-p-copyright {
+  font-size: 11px;
+}
