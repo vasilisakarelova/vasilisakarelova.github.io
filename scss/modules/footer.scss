@@ -1,11 +1,12 @@
 .root {
   position: relative;
   width: 90%;
-  height: 80vh;
+  height: auto;
   margin: 0 auto;
 
-  @media screen and (min-width: $mobile-l) {
+  @media screen and (min-width: $small-up) {
     width: 80%;
+    height: 80vh;
   }
 }
 
@@ -37,10 +38,10 @@
 }
 
 .footer-cell {
-  width: 16%;
-  margin-right: 4%;
   clear: none;
-  display: inline-flex;
+  display: block;
+  width: 45%;
+  margin-right: 5%;
   float: left;
 
   &:before,
@@ -48,13 +49,24 @@
     content: '';
     display: table;
   }
+
+  @media screen and (min-width: $small-up) {
+    display: inline-flex;
+    width: 16%;
+    margin-right: 4%;
+  }
 }
 
 .footer-cell-email {
   position: relative;
-  display: inline-flex;
-  width: 60%;
+  display: block;
+  width: 100%;
   float: left;
+
+  @media screen and (min-width: $small-up) {
+    display: inline-flex;
+    width: 60%;
+  }
 }
 
 .footer-p {

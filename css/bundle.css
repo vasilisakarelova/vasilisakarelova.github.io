@@ -205,11 +205,12 @@ body {
 .root {
   position: relative;
   width: 90%;
-  height: 80vh;
+  height: auto;
   margin: 0 auto; }
-  @media screen and (min-width: 425px) {
+  @media screen and (min-width: 40.0625em) {
     .root {
-      width: 80%; } }
+      width: 80%;
+      height: 80vh; } }
 
 .capture {
   position: relative;
@@ -235,20 +236,29 @@ body {
   width: 100%; }
 
 .footer-cell {
-  width: 16%;
-  margin-right: 4%;
   clear: none;
-  display: inline-flex;
+  display: block;
+  width: 45%;
+  margin-right: 5%;
   float: left; }
   .footer-cell:before, .footer-cell:after {
     content: '';
     display: table; }
+  @media screen and (min-width: 40.0625em) {
+    .footer-cell {
+      display: inline-flex;
+      width: 16%;
+      margin-right: 4%; } }
 
 .footer-cell-email {
   position: relative;
-  display: inline-flex;
-  width: 60%;
+  display: block;
+  width: 100%;
   float: left; }
+  @media screen and (min-width: 40.0625em) {
+    .footer-cell-email {
+      display: inline-flex;
+      width: 60%; } }
 
 .footer-p {
   display: inline-block;
