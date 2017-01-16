@@ -1,4 +1,6 @@
-(function () {
+import './modules/animations';
+
+(() => {
   const title = document.title;
 
   window.addEventListener('blur', () => {

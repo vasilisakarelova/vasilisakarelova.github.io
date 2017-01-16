@@ -202,6 +202,9 @@ body {
 .cls-9 {
   stroke-width: 1.75px; }
 
+.anime {
+  transform-origin: center; }
+
 .root {
   position: relative;
   width: 90%;
