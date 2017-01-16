@@ -205,6 +205,12 @@ body {
 .anime {
   transform-origin: center; }
 
+.anime--dash {
+  stroke: blue;
+  stroke-width: 2px;
+  stroke-miterlimit: 10;
+  fill: none; }
+
 .root {
   position: relative;
   width: 90%;

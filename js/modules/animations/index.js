@@ -24,6 +24,17 @@ const smallCross = anime({
   loop: true
 });
 
+const smallCrossSlow = anime({
+  targets: '.anime--slow-motion',
+  transform: function() {
+      return ['rotate(360 17.79 30.95)', 'rotate(0 17.79 30.95)'];
+    },
+  easing: 'linear',
+  duration: 5000,
+  loop: true,
+  direction: 'normal'
+});
+
 const dots = anime({
   targets: '.anime--scale-dot',
   transform: ['translate(-20 -22) scale(1 2)', 'translate(0 0) scale(1 1)'],
@@ -46,21 +57,29 @@ const zoom = anime({
   loop: true
 });
 
-const dashOffset = anime({
+const dashOffsetDefaults = {
   targets: '.anime--dash',
+  duration: 800,
+  easing: 'easeOutExpo',
+  direction: 'normal'
+}
+
+const dashOffset = anime(Object.assign({}, dashOffsetDefaults, {
   strokeDashoffset: function(el) {
     var pathLength = el.getTotalLength();
     el.setAttribute('stroke-dasharray', pathLength);
     return [-pathLength, 0];
   },
-  stroke: {
-    value: function(el, i) {
-      return 'rgb(200,'+ i * 8 +',150)';
-    },
-    easing: 'linear',
-    duration: 2000,
-  },
-  loop: true,
-  easing: 'easeOutExpo',
-  direction: 'alternate'
-});
+  complete: function() {
+    anime(Object.assign({}, dashOffsetDefaults, {
+      strokeDashoffset: function(el) {
+        var pathLength = el.getTotalLength();
+        el.setAttribute('stroke-dasharray', pathLength);
+        return [0, pathLength];
+      },
+      complete: function() {
+        dashOffset.restart();
+      }
+    }));
+  }
+}));

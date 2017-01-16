@@ -96,6 +96,17 @@
 	  loop: true
 	});
 
+	var smallCrossSlow = (0, _animejs2.default)({
+	  targets: '.anime--slow-motion',
+	  transform: function transform() {
+	    return ['rotate(360 17.79 30.95)', 'rotate(0 17.79 30.95)'];
+	  },
+	  easing: 'linear',
+	  duration: 5000,
+	  loop: true,
+	  direction: 'normal'
+	});
+
 	var dots = (0, _animejs2.default)({
 	  targets: '.anime--scale-dot',
 	  transform: ['translate(-20 -22) scale(1 2)', 'translate(0 0) scale(1 1)'],
@@ -118,24 +129,32 @@
 	  loop: true
 	});
 
-	var dashOffset = (0, _animejs2.default)({
+	var dashOffsetDefaults = {
 	  targets: '.anime--dash',
+	  duration: 800,
+	  easing: 'easeOutExpo',
+	  direction: 'normal'
+	};
+
+	var dashOffset = (0, _animejs2.default)(Object.assign({}, dashOffsetDefaults, {
 	  strokeDashoffset: function strokeDashoffset(el) {
 	    var pathLength = el.getTotalLength();
 	    el.setAttribute('stroke-dasharray', pathLength);
 	    return [-pathLength, 0];
 	  },
-	  stroke: {
-	    value: function value(el, i) {
-	      return 'rgb(200,' + i * 8 + ',150)';
-	    },
-	    easing: 'linear',
-	    duration: 2000
-	  },
-	  loop: true,
-	  easing: 'easeOutExpo',
-	  direction: 'alternate'
-	});
+	  complete: function complete() {
+	    (0, _animejs2.default)(Object.assign({}, dashOffsetDefaults, {
+	      strokeDashoffset: function strokeDashoffset(el) {
+	        var pathLength = el.getTotalLength();
+	        el.setAttribute('stroke-dasharray', pathLength);
+	        return [0, pathLength];
+	      },
+	      complete: function complete() {
+	        dashOffset.restart();
+	      }
+	    }));
+	  }
+	}));
 
 /***/ },
 /* 2 */
