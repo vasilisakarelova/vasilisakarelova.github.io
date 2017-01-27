@@ -296,4 +296,5 @@ body {
       font-size: 30px; } }
 
 .footer-p-copyright {
-  font-size: 11px; }
+  font-size: 11px;
+  display: block; }
