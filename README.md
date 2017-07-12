@@ -2,4 +2,4 @@
 
 Just a personal website, focusing on animation. 
 
-(Check it)[https://vasilisakarelova.github.io].
+[Check it](https://vasilisakarelova.github.io).
